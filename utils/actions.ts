@@ -471,6 +471,7 @@ export const addToCartAction = async (prevState:any, formData: FormData) => {
   } catch (error) {
     return renderError(error)
   }
+  revalidatePath('/cart')
   redirect('/cart')
 }
 
